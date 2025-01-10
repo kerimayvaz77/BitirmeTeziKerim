@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BitirmeTeziKerim.Models.Duyuru>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h1><b>Duyuru Paneli</b></h1>
+<br />
+<br />
+<p>
+    <a class="btn btn-danger" asp-action="Create">Duyuruya Ekleme Yap</a>
+</p>
+<table class="table">
+    <thead  class="btn-dark">
+        <tr>
+            <th><h2>
+    Fotoğraf
+</h2>
+            </th>
+            <th><h2>
+    Açıklaması
+</h2>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="btn-success">
+                <td>
+                    <img style="height:200px;width:300px;" src=" @Html.DisplayFor(modelItem => item.Url)">
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Aciklama)
+                </td>
+                <td>
+                    <a class="btn btn-primary" asp-action="Delete" asp-route-id="@item.Id">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

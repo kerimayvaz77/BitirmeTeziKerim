@@ -1,0 +1,56 @@
+﻿@model BitirmeTeziKerim.Models.PersonelTablo
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Oluştur</h1>
+
+<h4>Personel Tablosu</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AkademikPersonel" class="control-label"></label>
+                <input asp-for="AkademikPersonel" class="form-control" />
+                <span asp-validation-for="AkademikPersonel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Unvan" class="control-label"></label>
+                <input asp-for="Unvan" class="form-control" />
+                <span asp-validation-for="Unvan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sayi" class="control-label"></label>
+                <input asp-for="Sayi" class="form-control" />
+                <span asp-validation-for="Sayi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdariPersonel" class="control-label"></label>
+                <input asp-for="IdariPersonel" class="form-control" />
+                <span asp-validation-for="IdariPersonel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sinif" class="control-label"></label>
+                <input asp-for="Sinif" class="form-control" />
+                <span asp-validation-for="Sinif" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sayi1" class="control-label"></label>
+                <input asp-for="Sayi1" class="form-control" />
+                <span asp-validation-for="Sayi1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Kaydet" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Başa geri dön.</a>
+</div>
+

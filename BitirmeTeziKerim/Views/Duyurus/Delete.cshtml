@@ -1,0 +1,36 @@
+﻿@model BitirmeTeziKerim.Models.Duyuru
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Silme</h1>
+
+<h3>Silmek istediğinize emin misiniz?</h3>
+<div>
+    <h4>Duyuru</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-4">
+           Fotoğraf =
+        </dt>
+        <dd class="col-sm-8">
+         <img style="height:200px;width:200px;"src="@Html.DisplayFor(model => model.Url)" />  
+            
+        </dd>
+        <dt class = "col-sm-4">
+            Açıklaması =
+        </dt>
+        <dd class = "col-sm-8"><h3>
+    @Html.DisplayFor(model => model.Aciklama)
+</h3>
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Sil" class="btn btn-danger" /> |
+        <a asp-action="Index">Başa geri dön.</a>
+    </form>
+</div>

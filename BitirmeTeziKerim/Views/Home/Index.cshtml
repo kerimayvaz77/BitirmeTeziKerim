@@ -1,0 +1,173 @@
+﻿@using BitirmeTeziKerim.Models
+@model dynamic
+@*burda birden fazla model kullanmak için kullandım*@
+@{
+    ViewData["Title"] = "Ana Sayfa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="~/css/font-awesome.css" rel="stylesheet" />
+    <style>
+
+        .sag {
+            width: 29%;
+            position: relative;
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sol {
+            background: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 5px auto;
+            height: 370px;
+            padding: 18px;
+            -webkit-box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.35);
+            -moz-box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.35);
+            box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.35);
+            margin: 1%;
+        }
+        .sol img{
+            width:150px;
+            height:170px;
+            margin-right:40%;
+        }
+          
+
+        .orta {
+            background: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 5px auto;
+            height: 370px;
+            padding: 18px;
+            -webkit-box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.35);
+            -moz-box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.35);
+            box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.35);
+            margin: 1%;
+        }
+
+        .sag {
+            background: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 5px auto;
+            height: 370px;
+            padding: 18px;
+            -webkit-box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.35);
+            -moz-box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.35);
+            box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.35);
+            margin: 1%;
+        }
+
+        .orta iframe {
+            width: 80%;
+            height: 80%;
+        }
+
+        .sag iframe {
+            width: 80%;
+            height: 80%;
+        }
+        .carousel-inner img {
+            width: 100%;
+            height: 350px;
+        }
+
+        /* body {
+            background-image: url('https://cdn.duzce.edu.tr/File/GetFile/92354f8b-bfb8-462a-bd11-657f20f7bc42');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+        }*/
+        /* body {
+            background-image: url('../images/arkaplan3.png');
+        }*/
+
+    </style>
+</head>
+<body>
+
+    <section>
+        <div>
+            <video autoplay="autoplay" loop="loop" style="background-size: auto; margin-left: auto; margin-right: auto; position: absolute; z-index: 9;">
+                <source src="~/images/intro.mp4" type="video/mp4" />
+            </video>
+        </div>
+
+        <img style="cursor: pointer; width: 100%; height:100%;margin-top:50%; z-index: 8;" src="~/images/foto3.png" />
+        <div class="container" style="z-index: 10; position: absolute; margin-top: 2%;margin-left:20%;">
+            
+           
+
+                <div class="row" style="background-color:white">
+                   
+                        <div class="col-lg-4">
+                            <div class="sol">
+                                <div id="slayt" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        @foreach (Duyuru cn131 in Model.duyurulist)
+                                        {
+                                            <div class="carousel-item active">
+                                                <img class="rounded-circle" alt="Cinque Terre" style="height:250px;width:250px;" src="@Html.DisplayFor(modelItem => cn131.Url)">
+                                                <h3 style=" color: var(--info); margin-top: 0%;">@Html.DisplayFor(modelItem => cn131.Aciklama)</h3>
+                                            </div>
+
+                                            break;
+                                        }
+                                        @foreach (Duyuru cn131 in Model.duyurulist)
+                                        {
+                                            <div class="carousel-item">
+                                                <img class="rounded-circle" alt="Cinque Terre" style="height:250px;width:250px;" src="@Html.DisplayFor(modelItem => cn131.Url)">
+                                                <h3 style=" color: var(--info); margin-top: 0%;">@Html.DisplayFor(modelItem => cn131.Aciklama)</h3>
+                                            </div>
+
+                                        }
+
+                                    </div>
+                                </div>
+                          </div>
+                        </div>
+                    
+                    @foreach (DuyuruLinkTablo cn in Model.duyurulinktablolist)
+                    {
+                        <div class="col-lg-4">
+                            <div class="orta">
+
+                                <iframe src="@Html.DisplayFor(modelItem => cn.KoyulacakLink)" frameborder="0"></iframe>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="sag">
+                                <iframe src="@Html.DisplayFor(modelItem => cn.KoyulacakLink2)" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+    </section>
+
+</body>
+</html>

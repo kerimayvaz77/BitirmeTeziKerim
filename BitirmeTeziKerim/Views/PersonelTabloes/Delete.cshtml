@@ -1,0 +1,58 @@
+﻿@model BitirmeTeziKerim.Models.PersonelTablo
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Sil</h1>
+
+<h3>Silmek istediğine emin misin?</h3>
+<div>
+    <h4>Personel Tablosu</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AkademikPersonel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AkademikPersonel)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Unvan)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Unvan)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sayi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sayi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdariPersonel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdariPersonel)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sinif)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sinif)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sayi1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sayi1)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Silme" class="btn btn-danger" /> |
+        <a asp-action="Index">Başa geri dön.</a>
+    </form>
+</div>

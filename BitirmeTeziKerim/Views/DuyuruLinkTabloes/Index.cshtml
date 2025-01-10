@@ -1,0 +1,42 @@
+﻿@model IEnumerable<BitirmeTeziKerim.Models.DuyuruLinkTablo>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h1><b>Admin Paneli</b></h1>
+<br />
+<h1>Duyuru Link DÜzenleme Bölümü</h1>
+
+
+<table class="table">
+    <thead>
+        <tr >
+            <th class="bg-light">
+                <h1 class="bg-warning">   Koyulacak Link 1</h1>
+            </th>
+            <th class="bg-info">
+              <h1 class="bg-warning">  Koyulacak Link 2</h1>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td class="bg-info">
+               
+                <iframe src="@Html.DisplayFor(modelItem => item.KoyulacakLink)" style="width:100%;height:600px;" frameborder="0"></iframe>
+
+            </td>
+            <td class="bg-light">
+                
+                <iframe src="@Html.DisplayFor(modelItem => item.KoyulacakLink2)" style="width:100%;height:600px;" frameborder="0"></iframe>
+            </td>
+            <td>
+                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id" style="width:100%;height:600px;"><h1  style="margin-top:100%">Düzenle</h1> </a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

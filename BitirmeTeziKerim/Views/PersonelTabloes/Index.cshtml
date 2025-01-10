@@ -1,0 +1,61 @@
+﻿@model IEnumerable<BitirmeTeziKerim.Models.PersonelTablo>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<h1>Personel Tablosu</h1>
+
+
+
+<table class="table">
+    <thead class="btn-danger"> 
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AkademikPersonel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Unvan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sayi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdariPersonel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sinif)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sayi1)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="btn-success">
+            <td>
+                @Html.DisplayFor(modelItem => item.AkademikPersonel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Unvan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sayi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdariPersonel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sinif)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sayi1)
+            </td>
+            
+        </tr>
+}
+    </tbody>
+</table>

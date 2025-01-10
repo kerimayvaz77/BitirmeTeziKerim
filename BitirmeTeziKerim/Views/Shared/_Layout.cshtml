@@ -1,0 +1,387 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="~/fonts/icomoon/style.css" rel="stylesheet" />
+    <link href="~/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/style.css?Version=7" />
+
+    <style>
+        #headline-panel {
+            background: rgb(48,142,194);
+            background: -moz-linear-gradient(90deg, rgba(48,142,194,1) 0%, rgba(38,221,216,1) 100%);
+            background: -webkit-linear-gradient(90deg, rgba(48,142,194,1) 0%, rgba(38,221,216,1) 100%);
+            background: linear-gradient(90deg, rgba(48,142,194,1) 0%, rgba(38,221,216,1) 100%);
+            width: 100%;
+            font-family: "Raleway";
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .input-group {
+            background: var(--white);
+            border-radius: 26px;
+            font-size: 22px;
+            height: 2em;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            color: var(--footerText);
+            margin: 20px 0;
+        }
+        .fa-copyright:before {
+            content: ""
+        }
+        .copyright {
+            width: 100vw;
+            background: var(--darkGray);
+            color: var(--white);
+            font-size: 15px;
+            height: 3em;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Raleway';
+            flex-wrap: wrap;
+        }
+
+            .copyright a {
+                color: var(--white);
+                margin: 0 5px;
+            }
+
+            .input-group i {
+                margin: 0 10px;
+                flex-grow: 1;
+            }
+
+            .input-group input {
+                border: none;
+                outline: none;
+                height: 2.1em;
+                flex-grow: 60;
+                background: transparent;
+                padding: 0 20px 0 0;
+                font-family: 'Raleway';
+            }
+    </style>
+</head>
+<body>
+    @*<div class="wrapper flex container top-bar"><nav>
+            <ul class="nav dn">
+                <li><a href="/">Personel</a></li>
+                <li><a href="/" >Öğrenci</a></li>
+                <li><a href="http://hastane.duzce.edu.tr/">Hastane</a></li>
+                <li><a href="https://duzceteknopark.com.tr/" >Teknopark</a></li>
+                <li><a href="https://sanalsergi.duzce.edu.tr/" >Sanat Galerisi</a></li>
+                <li><a href="https://mbs.duzce.edu.tr" >Mezunlar</a></li>
+                <li>
+                    <a href="/08d6/dukkan" target="_blank">
+                        <img width="90" src="/Content/theme-v2/img/dukkan.png" />
+                    </a>
+                </li>
+            </ul>
+        </nav></div>*@
+    <div class="top-bar " style="background-color: #33ccff;">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="float-left" style="float:left">
+                    <a href="#" class="text-white navbar-text"><span class="mr-2"></span> <span class="d-none d-md-inline-block">Çevre ve Sağlık Alanında İhtisas Üniversitesi</span></a>
+
+                </div>
+
+                <div class="float-right " style="float:right">
+
+                    <a href="#" class="text-white"><span class="mr-2  "></span> <span class="d-none d-md-inline-block">Personel</span></a>
+                    <a href="#" class="text-white"><span class="mr-2  "></span> <span class="d-none d-md-inline-block">Öğrenci</span></a>
+                    <a href="#" class="text-white"><span class="mr-2  "></span> <span class="d-none d-md-inline-block">Hastane</span></a>
+                    <a href="#" class="text-white"><span class="mr-2  "></span> <span class="d-none d-md-inline-block">Tekonpark</span></a>
+                    <a href="#" class="text-white"><span class="mr-2  "></span> <span class="d-none d-md-inline-block">Hızlı Erişim </span></a>
+                    <a href="#" class="text-white"><span class="mr-2  "></span> <span class="d-none d-md-inline-block">Sanat Galerisi</span></a>
+                    <a href="#" class="text-white"><span class="mr-2  "></span> <span class="d-none d-md-inline-block">Mezunlar</span></a>
+                    <a href="#" class="text-white"><span class="mr-2  "></span> <span class="d-none d-md-inline-block"><img src="~/images/dukkan.png" width="50" height="10" /></span></a>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="site-mobile-menu container-fluid">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header class="site-navbar container-fluid" role="banner">
+
+        <div class="container-fluid">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-3 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="/"> <img src="~/images/logo.png" /></a></h1>
+
+
+                </div>
+                <div class="col-8 col-md-9 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+
+                        <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+                            <li class="has-children">
+                                <a href=""><span>Üniversitemiz</span></a>
+                                <ul class="dropdown arrow-top">
+                                    <li><a href="/">Düzce</a></li>
+                                    <li><a href="/">Kuruluş</a></li>
+                                    <li class="has-children">
+                                        <a asp-controller="" asp-action="">Yönetim</a>
+                                        <ul class="dropdown">
+                                            <li><a asp-controller="" asp-action="">Rektör</a></li>
+                                            <li><a asp-controller="" asp-action="">Rektör Yardımcısı</a></li>
+                                            <li><a asp-controller="" asp-action="">Senato</a></li>
+                                            <li><a asp-controller="" asp-action="">Yönetim Kurulu</a></li>
+                                            <li><a asp-controller="" asp-action="">Genel Sekreter</a></li>
+                                            <li><a asp-controller="" asp-action="">Teşkilat Şeması</a></li>
+                                            <li><a asp-controller="" asp-action="">Senato ve Yönetim Kurulu Kararları</a></li>
+                                            <li><a asp-controller="" asp-action="">Rektörlerimiz</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children">
+                                        <a asp-controller="Sayilars" asp-action="Index2">Sayılarla DÜ</a>
+                                        <ul class="dropdown">
+                                            <li><a asp-controller="SayilarTablos" asp-action="Index">Öğrenci Sayıları</a></li>
+                                            <li><a asp-controller="PersonelTabloes" asp-action="Index">Personel Sayıları</a></li>
+                                            <li><a asp-controller="" asp-action="">Bölüm ve Program Sayıları</a></li>
+                                            <li><a asp-controller="" asp-action="">Proje Sayıları</a></li>
+                                            <li><a asp-controller="" asp-action="">Fikri Mülkiyet</a></li>
+                                            <li><a asp-controller="" asp-action="">Derslik</a></li>
+                                            <li><a asp-controller="" asp-action="">Kapalı Alan</a></li>
+                                            <li><a asp-controller="" asp-action="">Üniversite İzleme ve Değerlendirme Raporu</a></li>
+                                            <li><a asp-controller="" asp-action="">Bütçe</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children">
+                                        <a asp-controller="" asp-action="">Sıralamalar</a>
+                                        <ul class="dropdown">
+                                            <li><a asp-controller="" asp-action="">URAP</a></li>
+                                            <li><a asp-controller="" asp-action="">THE</a></li>
+                                            <li><a asp-controller="" asp-action="">Girişimcilik Endeksi</a></li>
+                                            <li><a asp-controller="" asp-action="">Green Metric</a></li>
+                                            <li><a asp-controller="" asp-action="">İnnovaLig</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/">İlkler</a></li>
+                                    <li class="has-children">
+                                        <a asp-controller="" asp-action="">Kurumsal Strateji</a>
+                                        <ul class="dropdown">
+                                            <li><a asp-controller="" asp-action="">Stratejik Plan 2020-2024</a></li>
+                                            <li><a asp-controller="" asp-action="">Kalite Politikası</a></li>
+                                            <li><a asp-controller="" asp-action="">Sürekli İyileştirme</a></li>
+                                            <li><a asp-controller="" asp-action="">KİDR</a></li>
+                                            <li><a asp-controller="" asp-action="">Sürdürülebilirlik Raporu</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/">İdari Birimler</a></li>
+                                    <li class="has-children">
+                                        <a asp-controller="" asp-action="">Kampüs Yaşamı</a>
+                                        <ul class="dropdown">
+                                            <li><a asp-controller="" asp-action="">Yeme/İçme</a></li>
+                                            <li><a asp-controller="" asp-action="">Spor Merkezleri</a></li>
+                                            <li><a asp-controller="" asp-action="">Ulaşım</a></li>
+                                            <li><a asp-controller="" asp-action="">Barınma</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/">İşbirlikleri</a></li>
+                                    <li><a href="/">Tanıtım Filmleri/Fotoğraf Galerisi</a></li>
+                                    <li><a href="/">Yönetmelik ve Yönergeler</a></li>
+                                    <li><a href="/">Bilgi Güvenliği Politikamız</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-children">
+                                <a href=""><span>Akademik</span></a>
+                                <ul class="dropdown arrow-top">
+                                    <li class="has-children">
+                                        <a asp-controller="" asp-action="">Fakülteler</a>
+                                        <ul class="dropdown">
+                                            <li><a asp-controller="" asp-action="">Akçakoca Bey Siyasal Bilgiler Fakültesi</a></li>
+                                            <li><a asp-controller="" asp-action="">Eğitim Fakültesi</a></li>
+                                            <li><a asp-controller="" asp-action="">Fen Edebiyat Fakültesi</a></li>
+                                            <li><a asp-controller="" asp-action="">İlahiyat Fakültesi</a></li>
+                                            <li><a asp-controller="" asp-action="">İşletme Fakültesi</a></li>
+                                            <li><a asp-controller="" asp-action="">Mühendislik Fakültesi</a></li>
+                                            <li><a asp-controller="" asp-action="">Orman Fakültesi</a></li>
+                                            <li><a asp-controller="" asp-action="">Sağlık Bilimleri Fakültesi</a></li>
+                                            <li><a asp-controller="" asp-action="">Sanat,Tasarım ve Mimarlık Fakültesi</a></li>
+                                            <li><a asp-controller="" asp-action="">Spor Bilimleri Fakültesi</a></li>
+                                            <li><a asp-controller="" asp-action="">Tıp Fakültesi</a></li>
+                                            <li><a asp-controller="" asp-action="">Ziraat Fakültesi</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="has-children">
+                                        <a asp-controller="" asp-action="">Enstitüler</a>
+                                        <ul class="dropdown">
+                                            <li><a asp-controller="" asp-action="">Lisansüstü Eğitim Enstitüsü</a></li>
+                                            <li><a asp-controller="" asp-action="">Güzel Sanatlar Enstitüsü</a></li>
+                                            <li><a asp-controller="" asp-action="">Fen Bilimleri Enstitüsü</a></li>
+                                            <li><a asp-controller="" asp-action="">Sağlık Bilimleri Enstitüsü</a></li>
+                                            <li><a asp-controller="" asp-action="">Sosyal Bilimler Enstitüsü</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children">
+                                        <a asp-controller="" asp-action="">Yüksekokullar</a>
+                                        <ul class="dropdown">
+                                            <li><a asp-controller="" asp-action="">Akçakoca Turizm İşl. ve O.Y.O.</a></li>
+                                            <li><a asp-controller="" asp-action="">Hakime ERCİYAS Yabancı Diller Yüksekokulu</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children">
+                                        <a asp-controller="" asp-action="">Meslek Yüksekokulları</a>
+                                        <ul class="dropdown">
+                                            <li><a asp-controller="" asp-action="">Akçakoca MYO</a></li>
+                                            <li><a asp-controller="" asp-action="">Çilimli MYO</a></li>
+                                            <li><a asp-controller="" asp-action="">Düzce MYO</a></li>
+                                            <li><a asp-controller="" asp-action="">Dr. Engin PAK Cumayeri MYO</a></li>
+                                            <li><a asp-controller="" asp-action="">Gölyaka MYO</a></li>
+                                            <li><a asp-controller="" asp-action="">Gümüşova MYO</a></li>
+                                            <li><a asp-controller="" asp-action="">Kaynaşlı MYO</a></li>
+                                            <li><a asp-controller="" asp-action="">Ormancılık MYO</a></li>
+                                            <li><a asp-controller="" asp-action="">Sağlık Hizmetleri MYO</a></li>
+                                            <li><a asp-controller="" asp-action="">Sosyal Bilimler MYO</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/">Kurullar</a></li>
+                                    <li class="has-children">
+                                        <a asp-controller="" asp-action="">Bölüm Başkanlıkları</a>
+                                        <ul class="dropdown">
+                                            <li><a asp-controller="" asp-action="">Atatürk İlkeleri ve İnkılap Tarihi Bölümü</a></li>
+                                            <li><a asp-controller="" asp-action="">Türk Dili</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-children">
+                                <a href=""><span>Araştırma</span></a>
+                                <ul class="dropdown arrow-top">
+                                    <li><a href="/">Araştırma Merkezleri</a></li>
+                                    <li><a href="/">Laboratuvar Envanteri</a></li>
+                                    <li><a href="/">Yayınlar Projeler</a></li>
+                                    <li><a href="/">Hakemli Dergiler</a></li>
+                                    <li><a href="/">Teknoloji Transfer Ofisi</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-children">
+                                <a href=""><span>İhtisaslaştırma</span></a>
+                                <ul class="dropdown arrow-top">
+                                    <li><a href="/">Program Kapsamı</a></li>
+                                    <li><a href="/">Tıbbi Bitki Yetiştiriciliği</a></li>
+                                    <li><a href="/">Ürünler/Markalar</a></li>
+                                    <li><a href="/">Üretim Merkezi</a></li>
+                                    <li><a href="/">Geleneksel ve Tamamlayıcı Tıp Faaliyetleri</a></li>
+                                    <li><a href="/">Tarımsal Atıkların Geri Kazanımı Faaliyetleri</a></li>
+                                    <li><a href="/">Arıcılık / Arı Ürünleri</a></li>
+                                    <li><a href="/">Bilimsel Yayınlar</a></li>
+                                    <li><a href="/">İşbirlikleri</a></li>
+                                    <li><a href="/">Etkinlikler</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href=""><span class="text-primary">DÜ</span>Yayınlar</a></li>
+                            <li><a href=""><span class="text-primary">DÜ</span>Duyurular</a></li>
+                            <li><a asp-controller="Login" asp-action="GirisYap"><span class="text-success icon-lock"></span>Admin Giriş</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+
+                <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+
+            </div>
+
+        </div>
+
+
+    </header>
+
+
+    <br />
+    <br />
+
+    <div>
+
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.sticky.js"></script>
+    <script src="~/js/main.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <footer style="margin-top:30%">
+       
+        <section id="headline-panel">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="sol1">
+                        <h1>   ANA KAMPÜS</h1>
+                        <br />
+                        <br />
+
+                        <h2>Düzce Üniversitesi Konuralp Yerleşkesi Yörük Mah. Merkez/DÜZCE, 81620</h2>
+                        <br />
+                        <h4>
+                            TEL : 0850 800 81 81
+                        </h4>
+
+                        <h4>   FAKS: : 0380 542 11 03</h4>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="orta1" style="margin-top: 30%">
+                        <div class="input-group">
+                            <svg style="margin-left:3%" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                            <input type="text" value="" placeholder="     Arama">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="sag1" style="margin-top: 0%">
+                        <img src="~/images/karınca.png" />
+
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                © Copyright -
+                <a href="https://duzce.edu.tr">Düzce Üniversitesi</a>
+                <a href="https://bilgiislem.edu.tr">Bilgi İşlem Daire Başkanlığı</a>
+                v.1.71 - 2020
+            </div>
+        </section>
+
+    </footer>
+</body>
+
+</html>

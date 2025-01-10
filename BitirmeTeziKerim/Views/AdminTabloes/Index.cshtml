@@ -1,0 +1,54 @@
+﻿@model IEnumerable<BitirmeTeziKerim.Models.AdminTablo>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1><b>Admin Paneli</b></h1>
+
+<br />
+    <a asp-action="Create"> 
+        <input type="submit" value="Yeni Yetkili Yarat" class="btn btn-danger" />
+    </a>
+
+<br />
+<br />
+<br />
+<table class="table">
+    <thead>
+        <tr style="background-color:cyan;">
+
+            <th>
+                @Html.DisplayNameFor(model => model.KullaniciIsmi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sifre)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr style="background-color:hotpink;">
+            <td>
+                @Html.DisplayFor(modelItem => item.KullaniciIsmi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sifre)
+            </td>
+            <td>
+                <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a> |
+                <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.Id">Detaylar</a> |
+                <a class="btn btn-primary" asp-action="Delete" asp-route-id="@item.Id">Sil</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

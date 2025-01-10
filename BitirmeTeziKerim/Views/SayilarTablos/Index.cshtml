@@ -1,0 +1,63 @@
+﻿@model IEnumerable<BitirmeTeziKerim.Models.SayilarTablo>
+
+@{
+    ViewData["Title"] = "Sayılar Tablosu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<h1>Sayılar Tablosu</h1>
+
+
+<table class=" table">
+    <thead class="btn-danger">
+
+        <tr>
+            <th>
+                <h1>  @Html.DisplayNameFor(model => model.Sayilar)</h1>
+            </th>
+            <th>
+                <h1>  @Html.DisplayNameFor(model => model.OgrenimDuzeyi)</h1>
+            </th>
+            <th>
+                <h1>  @Html.DisplayNameFor(model => model.AkademikBirim)</h1>
+            </th>
+            <th>
+                <h1>  @Html.DisplayNameFor(model => model.Kadin)</h1>
+            </th>
+            <th>
+                <h1>  @Html.DisplayNameFor(model => model.Erkek)</h1>
+            </th>
+            <th>
+                <h1>  @Html.DisplayNameFor(model => model.Toplam)</h1>
+            </th>
+
+            <th></th>
+        </tr>
+        
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="btn-dark">
+            <td>
+                @Html.DisplayFor(modelItem => item.Sayilar.SayiTablo)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OgrenimDuzeyi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AkademikBirim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kadin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Erkek)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Toplam)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

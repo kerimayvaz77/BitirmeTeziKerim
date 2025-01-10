@@ -1,0 +1,42 @@
+﻿@model IEnumerable<BitirmeTeziKerim.Models.Sayilar>
+
+@{
+    ViewData["Title"] = "Sayılar";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h1><b>Admin Paneli</b></h1>
+<br />
+<h1>Sayılar</h1>
+<br />
+<br />
+<p>
+
+    <a class="btn btn-danger" asp-action="Create">Tablo Oluştur</a>
+</p>
+<br />
+<br />
+<table class="table">
+    <thead class="btn-danger">
+        <tr>
+            <th>
+                <h1> Tablo İsmi</h1>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="btn-success">
+                <td>
+                    <h4> @Html.DisplayFor(modelItem => item.SayiTablo)</h4>
+                </td>
+                <td>
+                    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a> |
+                    <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.Id">Detay</a> |
+                    <a class="btn btn-primary" asp-action="Delete" asp-route-id="@item.Id">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
